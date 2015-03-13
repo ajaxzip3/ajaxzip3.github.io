@@ -30,8 +30,8 @@
 * ================================================================ */
 
 AjaxZip3 = function(){};
-AjaxZip3.VERSION = '0.4';
-AjaxZip3.JSONDATA = 'http://ajaxzip3.googlecode.com/svn/trunk/ajaxzip3/zipdata';
+AjaxZip3.VERSION = '0.5';
+AjaxZip3.JSONDATA = 'https://ajaxzip3.github.io/zipdata';
 AjaxZip3.CACHE = [];
 AjaxZip3.prev = '';
 AjaxZip3.nzip = '';
