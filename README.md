@@ -9,7 +9,7 @@
 - Github移行を機にこれまでhttp、httpsで分かれていたURLを一本化いたしました。  
 今後は、https://ajaxzip3.github.io/ajaxzip3.js をご利用ください。
 
-###Google CodeからGithubへの移行ガイド
+###Google Code版からGithub版への移行ガイド
 HTML中の
 
     <script src="http://ajaxzip3.googlecode.com/svn/trunk/ajaxzip3/ajaxzip3.js" charset="UTF-8"></script>
