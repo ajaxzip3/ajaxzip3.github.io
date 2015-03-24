@@ -2,7 +2,7 @@
     ajaxzip3.js ---- AjaxZip3 郵便番号→住所変換ライブラリ
 
     Copyright (c) 2008-2015 Ninkigumi Co.,Ltd.
-    https://ajaxzip3.github.io/
+    http://ajaxzip3.github.io/
 
     Copyright (c) 2006-2007 Kawasaki Yusuke <u-suke [at] kawa.net>
     http://www.kawa.net/works/ajax/AjaxZip2/AjaxZip2.html
@@ -54,7 +54,7 @@ AjaxZip3.PREFMAP = [
     '福岡県',   '佐賀県',   '長崎県',   '熊本県',   '大分県',
     '宮崎県',   '鹿児島県', '沖縄県'
 ];
-AjaxZip3.zip2addr = function ( azip1, azip2, apref, aaddr, astrt, aarea ) {
+AjaxZip3.zip2addr = function ( azip1, azip2, apref, aaddr, aarea, astrt ) {
     AjaxZip3.fzip1 = AjaxZip3.getElementByName(azip1);
     AjaxZip3.fzip2 = AjaxZip3.getElementByName(azip2,AjaxZip3.fzip1);
     AjaxZip3.fpref = AjaxZip3.getElementByName(apref,AjaxZip3.fzip1);
@@ -207,8 +207,8 @@ AjaxZip3.zipjsonpquery = function(){
     var url = AjaxZip3.JSONDATA+'/zip-'+AjaxZip3.nzip.substr(0,3)+'.js';
     var scriptTag = document.createElement("script");
     scriptTag.setAttribute("type", "text/javascript");
-    scriptTag.setAttribute("src", url);
     scriptTag.setAttribute("charset", "UTF-8");
+    scriptTag.setAttribute("src", url);
     document.getElementsByTagName("head").item(0).appendChild(scriptTag);
    };
 
