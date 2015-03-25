@@ -41,6 +41,7 @@ AjaxZip3.fpref = '';
 AjaxZip3.addr = '';
 AjaxZip3.fstrt = '';
 AjaxZip3.farea = '';
+AjaxZip3.ffocus = true;
 
 AjaxZip3.PREFMAP = [
     null,       '北海道',   '青森県',   '岩手県',   '宮城県',
@@ -54,13 +55,14 @@ AjaxZip3.PREFMAP = [
     '福岡県',   '佐賀県',   '長崎県',   '熊本県',   '大分県',
     '宮崎県',   '鹿児島県', '沖縄県'
 ];
-AjaxZip3.zip2addr = function ( azip1, azip2, apref, aaddr, aarea, astrt ) {
+AjaxZip3.zip2addr = function ( azip1, azip2, apref, aaddr, aarea, astrt, afocus ) {
     AjaxZip3.fzip1 = AjaxZip3.getElementByName(azip1);
     AjaxZip3.fzip2 = AjaxZip3.getElementByName(azip2,AjaxZip3.fzip1);
     AjaxZip3.fpref = AjaxZip3.getElementByName(apref,AjaxZip3.fzip1);
     AjaxZip3.faddr = AjaxZip3.getElementByName(aaddr,AjaxZip3.fzip1);
     AjaxZip3.fstrt = AjaxZip3.getElementByName(astrt,AjaxZip3.fzip1);
     AjaxZip3.farea = AjaxZip3.getElementByName(aarea,AjaxZip3.fzip1);
+    AjaxZip3.ffocus = afocus === undefined ? true : afocus;
     if ( ! AjaxZip3.fzip1 ) return;
     if ( ! AjaxZip3.fpref ) return;
     if ( ! AjaxZip3.faddr ) return;
@@ -157,6 +159,7 @@ AjaxZip3.callback = function(data){
 
         // patch from http://iwa-ya.sakura.ne.jp/blog/2006/10/20/050037
         // update http://www.kawa.net/works/ajax/AjaxZip2/AjaxZip2.html#com-2006-12-15T04:41:22Z
+        if ( !AjaxZip3.ffocus ) return;
         if ( ! cursor ) return;
         if ( ! cursor.value ) return;
         var len = cursor.value.length;
