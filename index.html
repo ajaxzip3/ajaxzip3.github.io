@@ -1,321 +1,192 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html itemscope="" itemtype="http://schema.org/Organization" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
   <head>
-    <meta charset="utf-8">
-    <title>ajaxzip3</title>
-
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le styles -->
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//raw.github.com/twitter/bootstrap/master/docs/assets/css/docs.css" rel="stylesheet">
-    <link href="//raw.github.com/twitter/bootstrap/master/docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-    <style type="text/css">
-body {
- padding-top: 60px;
-}
-
-.hero-unit {
-  background-color: #f5f5f5;
-  margin-bottom: 30px;
-  padding: 60px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-}
-.hero-unit h1 {
-  margin-bottom: 0;
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-.hero-unit p {
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 27px;
-}
-
-.social-mix-top {
-position:relative;
-    margin: 30px 0 0 5px;
-}
-.social-mix-top ul li {
-    float: right;
-    height: 22px;
-    line-height: 15px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.social-mix-top ul li.hatebuButton {
-    margin-right: 7px;
-}
-.social-mix-top ul li.recommendButton, .social-mix-top ul li.likeButton {
-    margin-right: 5px;
-}
-.social-mix-top ul li.shareButton {
-    margin-right: 5px;
-}
-.social-mix-top ul li.tumblrButton {
-    margin-right: 5px;
-}
-
-
-    </style>
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/ico/bootstrap-apple-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/bootstrap-apple-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/bootstrap-apple-114x114.png">
-<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajaxzip3 設置サンプルページ</title>
+    <!-- Facebook: Open Graph //-->
+    <meta property="og:title">
+    <meta property="og:type" content="website">
+    <meta property="og:description">
+    <meta property="og:url">
+    <meta property="og:locale" content="ja_JP">
+    <!-- // Facebook-->
+    <meta itemprop="name" content="ajaxzip3 設置サンプルページ">
+    <meta itemprop="description" content="メンテナンスフリーの郵便番号自動入力ライブラリ">
+    <meta itemprop="image" content="">
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <link rel="shortcut icon" href="//family1.st/favicon.ico">
+    <!-- <link href='//netdna.bootstrapcdn.com/bootswatch/3.3.0/yeti/bootstrap.min.css' rel='stylesheet'/>-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-46259108-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </head>
-
   <body>
-
-    <!-- Navbar
-    ================================================== -->
-<div class="navbar navbar-fixed-top">
-<div class="navbar-inner">
-<div class="container">
-<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-<span class="i-bar"></span>
-<span class="i-bar"></span>
-<span class="i-bar"></span>
-</a>
-<a class="brand" href="http://ninkigumi.com/">株式会社人気組</a>
-<div class="nav-collapse">
-
-<ul class="nav">
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-サービス
-<b class="caret"></b>
-</a>
-<ul class="dropdown-menu">
-<li><a href="https://ajaxzip3.github.io/sample.html">郵便番号検索ライブラリajaxzip3</a></li>
-</ul>
-</li>
-
-</ul>
-
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="container">
-
-<!-- Masthead
-================================================== -->
-<header class="hero-unit" id="overview">
-<h1>ajaxzip3</h1>
-<p>世界一、簡単に設置できる郵便番号検索を目指して！</p>
-
-<div class="social-mix-top">
-    <ul>
-        <li class="shareButton"><a name="fb_share" type="button_count" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fninkigumi.com%2Fajaxzip3%2F" share_url="http%3A%2F%2Fninkigumi.com%2Fajaxzip3%2F">シェアする</a></li>
-        <li class="tweetButton"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ninkigumi.com/ajaxzip3/" data-text="簡単に設置できる郵便番号検索ajaxzip3" data-count="horizontal" data-lang="ja">Tweet</a></li>
-        <li class="plusone"><div class="g-plusone" data-annotation="inline" data-size="medium" data-width="200" data-href="http://ninkigumi.com"></div></li>
-
-    </ul>
-</div>
-
-</header>
-
-
-<div class="row">
-        <div class="span4">
-          <h2>わずか2行追加するだけで</h2>
-           <p>郵便番号検索ajaxzip3は、既存のHTMLにわずか2行追加するだけで設置できます。プログラミングの知識やサーバ側の設定は必要ありません。</p>
+    <header role="navigation" class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle"><span class="sr-only"></span><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="//family1.st" class="navbar-brand"><img alt="Brand" src="https://family1.st/logo_simple.svg" height="24px"></a>
         </div>
-        <div class="span4">
-          <h2>メンテナンスの必要ナシ</h2>
+        <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse"></nav>
+      </div>
+    </header>
+    <div id="top" style="text-align:center">
+      <div class="page-header">
+        <h1>ajaxzip3</h1>
+        <p>世界一、簡単に設置できる郵便番号検索ライブラリを目指して！</p>
+      </div>
+    </div>
+    <div class="contener left">
+      <div style="margin:2em auto" class="row">
+        <div class="col-md-4">
+          <h4>わずか2行追加するだけで</h4>
+          <p>郵便番号検索ajaxzip3は、既存のHTMLにわずか2行追加するだけで設置できます。プログラミングの知識やサーバ側の設定は必要ありません。</p>
+        </div>
+        <div class="col-md-4">
+          <h4>メンテナンスの必要ナシ</h4>
           <p>郵便番号データは、郵便事業株式会社が提供している最新データを株式会社人気組がGoogle Code内に格納しています。この郵便番号データをJSONPにて取得する仕組みのため、設置した後の郵便番号データのメンテナンス作業から解放されます。</p>
         </div>
-        <div class="span4">
-          <h2>豊富な採用実績</h2>
-           <p>オープンソースのMITライセンス。商用、非商用を問わず無償にてご利用いただけるため、2008年の公開以来、様々なプロダクトに採用されています。</p>
-          <p><a class="btn" href="https://github.com/ajaxzip3/ajaxzip3.github.io">Github »</a></p>
-       </div>
-</div>
-
-
-
-
-
-
-
-<div style="margin:0 auto;width:768px; margin-top:3em;">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-0230819688759365";
-/* ajaxzip3ビッグバナー */
-google_ad_slot = "5583264590";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
-
-
-<section id="sample">
-  <div class="page-header">
-    <h1>設置サンプル <small>どれぐらい簡単に設置できるかこのページのHTMLソースを確認してください</small></h1>
-  </div>
-
-
-  <h2>ワンボックスで郵便番号7桁を入力させる場合の設定例</h2>
-
-<div class="row">
-    <div class="span7">
-      <form class="form-horizontal">
-        <legend>都道府県と以降の住所を分ける場合</legend>
-        <fieldset class="control-group">
-          <label class="control-label" for="zip01">郵便番号</label>
-          <div class="controls">
-            <input type="text" class="xlarge span1" name="zip01" size="10" maxlength="8" onkeyup="AjaxZip3.zip2addr(this,'','pref01','addr01');">
-          </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="pref01">都道府県</label>
-          <div class="controls">
-            <input type="text" class="xlarge" name="pref01">
-          </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="addr01">以降の住所</label>
-          <div class="controls">
-            <input type="text" class="xlarge span4" name="addr01">
-          </div>
-        </fieldset>
-    </form>
+        <div class="col-md-4">
+          <h4>豊富な採用実績</h4>
+          <p>オープンソースのMITライセンス。商用、非商用を問わず無償にてご利用いただけるため、2008年の公開以来、様々なプロダクトに採用されています。</p>
+          <p><a href="https://github.com/ajaxzip3/ajaxzip3.github.io" class="btn btn-default">Github »</a></p>
+        </div>
+      </div>
     </div>
-    <div class="span5">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-0230819688759365";
-/* ajaxzip3レクタングル */
-google_ad_slot = "9931579065";
-google_ad_width = 336;
-google_ad_height = 280;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+    <div style="margin:0 auto;width:768px; margin-top:3em;"></div>
+    <script type="text/javascript">
+      <!--
+      google_ad_client = "ca-pub-0230819688759365";
+      /* ajaxzip3ビッグバナー */
+      google_ad_slot = "5583264590";
+      google_ad_width = 728;
+      google_ad_height = 90;
+      //-->
+    </script>
+    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    <div>ajaxzip3の維持更新費用は広告費で賄われています。ぜひ広告主のサイトも訪問してくださいね。</div>
+    <div style="margin-top:3em;border:solid 1px #000" class="contener">
+      <div><img src="https://lh3.googleusercontent.com/-bDRplWvzBVg/AAAAAAAAAAI/AAAAAAAAP1k/5-ZbLn9AYL4/photo.jpg" style="width:64px"></div>
+      <p>こんにちは。<strong>ajaxzip3</strong>メインコントリビュータの小林照幸です。</p>
+      <p>近況報告です。</p>
+      <p>現在、私は<a href="//family1.st">理想の家族形成を支援する Family 1st</a>を創設し、<br>独身者向けに<a href="https://family1.st/event">理想の相手の探し方セミナー</a>を開催しています。</p>
+      <p>ご存知のように<strong>ajaxzip3</strong>は誰もが簡単に設置できるライブラリですが、<br>今度はFamily 1stにおいて<strong>なかよしふうふ</strong>を誰もが実現できることを目指して、<br><strong>なかよしふうふ</strong>を量産するための定型行動をベストプラクティスとしてまとめあげることに尽力しています。</p>
+      <p>お恥ずかしい話ですが私は10年以上も結婚できずに大量の失敗を重ねながら試行錯誤を繰り返しました。</p>
+      <p>現在でこそ<strong>なかよしふうふ</strong>と認識されている私ですが、<br>かつては数多くの人たちから「結婚できそうにない人」「結婚しても失敗しそうな人」と認識されていたのです。</p>
+      <p>そしてこれは強調しておきたいことですが、私はわざと失敗しようとしたわけではありません。<br>最善の行動を選択したつもりで失敗していたのです。<br>ということは同じ状況であなたもあなたの子供も同じ間違いをする可能性が高いのです。</p>
+      <p>自分がもっと早く知りたかったことだから、ぜひ多くの人に伝えてあげたいと思います。<br>特に、論理的な開発者の皆さんにとっては納得も実践もしやすい内容になっています。</p><a href="https://family1.st/event">
+        <p><img src="https://family1.st/seminar/20150503seminar_01.jpg" style="width:150px"></p></a>
+      <p>もし良かったら周囲の独身者の方に是非オススメしてあげてください。</p><a href="//family1.st">
+        <p><img src="//family1.st/logo.svg" width="240px" alt="理想の家族形成を支援する Family 1st"></p></a>
     </div>
-  </div>
-
-<div class="row">
-    <div class="span7">
-      <form class="form-horizontal">
-        <legend>都道府県と以降の住所を分けない場合</legend>
-        <fieldset class="control-group">
-          <label class="control-label" for="zip11">郵便番号</label>
-          <div class="controls">
-            <input type="text" class="xlarge span1" name="zip11" size="10" maxlength="8" onkeyup="AjaxZip3.zip2addr(this,'','addr11','addr11');">
-          </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="addr11">住所</label>
-          <div class="controls">
-            <input type="text" class="xlarge span4" name="addr11">
-          </div>
-        </fieldset>
-      </form>
+    <div style="margin-top:3em" class="contener left">
+      <div class="row">
+        <h2 style="margin-bottom:1em">設置サンプル<small>　どれぐらい簡単に設置できるかこのページのHTMLソースを確認してください</small></h2>
+        <h3>ワンボックスで郵便番号7桁を入力させる場合の設定例</h3>
+        <form>
+          <legend>都道府県と以降の住所を分ける場合</legend>
+          <fieldset class="control-group">
+            <label for="zip01" class="control-label">郵便番号</label>
+            <div class="controls">
+              <input type="text" name="zip01" size="10" maxlength="8" onkeyup="AjaxZip3.zip2addr(this,'','pref01','addr01');">
+            </div>
+          </fieldset>
+          <fieldset class="control-group">
+            <label for="pref01" class="control-label">都道府県</label>
+            <div class="controls">
+              <input type="text" name="pref01">
+            </div>
+          </fieldset>
+          <fieldset class="control-group">
+            <label for="addr01" class="control-label">以降の住所</label>
+            <div class="controls">
+              <input type="text" name="addr01" style="width:100%">
+            </div>
+          </fieldset>
+        </form>
+        <h3>ワンボックスで郵便番号7桁を入力させる場合の設定例</h3>
+        <form>
+          <legend>都道府県と以降の住所を分けない場合</legend>
+          <fieldset class="control-group">
+            <label for="zip01" class="control-label">郵便番号</label>
+            <div class="controls">
+              <input type="text" name="zip11" size="10" maxlength="8" onkeyup="AjaxZip3.zip2addr(this,'','addr11','addr11');">
+            </div>
+          </fieldset>
+          <fieldset class="control-group">
+            <label for="addr11" class="control-label">住所</label>
+            <div class="controls">
+              <input type="text" name="addr11" style="width:100%">
+            </div>
+          </fieldset>
+        </form>
+        <h3>郵便番号を3桁-4桁形式で入力させる場合の設定例</h3>
+        <form>
+          <fieldset class="control-group">
+            <label for="zip01" class="control-label">郵便番号</label>
+            <div class="controls">
+              <input type="text" name="zip21" size="4" maxlength="3">-
+              <input type="text" name="zip22" size="5" maxlength="4" onkeyup="AjaxZip3.zip2addr('zip21','zip22','pref21','addr21','strt21');">
+            </div>
+          </fieldset>
+          <fieldset class="control-group">
+            <label for="pref21" class="control-label">都道府県</label>
+            <div class="controls">
+              <input type="text" name="pref21">
+            </div>
+          </fieldset>
+          <fieldset class="control-group">
+            <label for="addr21" class="control-label">市町村区</label>
+            <div class="controls">
+              <input type="text" name="addr21">
+            </div>
+          </fieldset>
+          <fieldset class="control-group">
+            <label for="strt21" class="control-label">以降の住所</label>
+            <div class="controls">
+              <input type="text" name="strt21" style="width:100%">
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
-    <div class="span5">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-0230819688759365";
-/* ajaxzip3レクタングル */
-google_ad_slot = "9931579065";
-google_ad_width = 336;
-google_ad_height = 280;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+    <div id="footer">
+      <div id="gadf"><a href="https://family1.st/">
+          <p>独身者向けに理想の相手の探し方セミナーを開催しています！</p>
+          <p><img src="https://family1.st/seminar/20150503seminar_01.jpg" style="width:150px"></p>
+          <p><img src="//family1.st/logo.svg" width="240px" alt="理想の家族形成を支援する Family 1st"></p></a></div>
+      <div><img id="qrcode" src="//family1.st/qr.png" width="120px"></div>
     </div>
-  </div>
-
-
-  <h2>郵便番号を3桁-4桁形式で入力させる場合の設定例</h2>
-
-<div class="row">
-    <div class="span7">
-      <form class="form-horizontal">
-        <legend></legend>
-        <fieldset class="control-group">
-          <label class="control-label" for="zip21">郵便番号</label>
-          <div class="controls">
-            <input type="text" class="xlarge  span1" name="zip21" size="4" maxlength="3">-<input type="text" class="xlarge span1" name="zip22" size="5" maxlength="4" onkeyup="AjaxZip3.zip2addr('zip21','zip22','pref21','addr21','strt21');">
-          </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="pref21">都道府県</label>
-          <div class="controls">
-            <input type="text" class="xlarge" name="pref21">
-          </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="addr21">市町村区</label>
-          <div class="controls">
-            <input type="text" class="xlarge" name="addr21">
-          </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="strt21">以降の住所</label>
-          <div class="controls">
-            <input type="text" class="xlarge span4" name="strt21">
-          </div>
-        </fieldset>
-
-      </form>
+    <p class="copy">Copyright&copy; Family 1st 2015 All Rights Reserved.</p>
+    <div id="page-top"><a href="#top">PAGE TOP ↑</a></div>
+    <div id="snsbox">
+      <div class="sns">
+        <ul class="snsb clearfix">
+          <li><a href="//twitter.com/share" data-count="vertical" data-via="" data-url="https://family1.st" data-text="独身者向けに理想の相手の探し方セミナーを開催しています！理想の家族形成を支援するFamily 1st: " class="twitter-share-button">Tweet</a>
+            <script type="text/javascript" src="//platform.twitter.com/widgets.js" async=""></script>
+          </li>
+          <li>
+            <iframe src="//www.facebook.com/plugins/like.php?href=https://family1.st&amp;layout=box_count&amp;show_faces=false&amp;width=50&amp;action=like&amp;colorscheme=light&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:70px; height:62px;" allowtransparency="true"></iframe>
+          </li>
+          <li>
+            <script src="https://apis.google.com/js/platform.js?publisherid=106313192506816468335" async="" defer=""></script>
+            <g:plusone size="tall" href="http://family1.st"></g:plusone>
+          </li>
+          <li><a href="//b.hatena.ne.jp/entry/family1.st" data-hatena-bookmark-title="Family 1st" data-hatena-bookmark-layout="vertical" title="このエントリーをはてなブックマークに追加" class="hatena-bookmark-button"><img src="https://b.hatena.ne.jp/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a>
+            <script type="text/javascript" src="https://b.hatena.ne.jp/js/bookmark_button.js" charset="utf-8" async="async"></script>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="span5">
-
-    </div>
-  </div>
-
-
-
-
-</section>
-
-
-
-      <!-- Footer
-      ================================================== -->
-<footer class="footer">
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>© 株式会社人気組 2008-2015</p>
-</footer>
-</div><!-- /container -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-<script type="text/javascript">window.___gcfg = {lang: 'ja'};(function(){var po = document.createElement('script');po.type = 'text/javascript';po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>
-<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-4506669-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-</body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js?ver=2.1.1"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
 </html>
