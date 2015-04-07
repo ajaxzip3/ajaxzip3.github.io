@@ -30,7 +30,7 @@
 * ================================================================ */
 
 AjaxZip3 = function(){};
-AjaxZip3.VERSION = '0.5';
+AjaxZip3.VERSION = '0.51';
 AjaxZip3.JSONDATA = 'https://ajaxzip3.github.io/zipdata';
 AjaxZip3.CACHE = [];
 AjaxZip3.prev = '';
@@ -42,6 +42,8 @@ AjaxZip3.addr = '';
 AjaxZip3.fstrt = '';
 AjaxZip3.farea = '';
 AjaxZip3.ffocus = true;
+AjaxZip3.onSuccess = null;
+AjaxZip3.onFailure = null;
 
 AjaxZip3.PREFMAP = [
     null,       '北海道',   '青森県',   '岩手県',   '宮城県',
@@ -103,15 +105,28 @@ AjaxZip3.zip2addr = function ( azip1, azip2, apref, aaddr, aarea, astrt, afocus 
 };
 
 AjaxZip3.callback = function(data){
+        function onFailure( ){
+            if( typeof AjaxZip3.onFailure === 'function' ) AjaxZip3.onFailure();
+        }
         var array = data[AjaxZip3.nzip];
         // Opera バグ対策：0x00800000 を超える添字は +0xff000000 されてしまう
         var opera = (AjaxZip3.nzip-0+0xff000000)+"";
         if ( ! array && data[opera] ) array = data[opera];
-        if ( ! array ) return;
+        if ( ! array ) {
+            onFailure();
+            return;
+        }
         var pref_id = array[0];                 // 都道府県ID
-        if ( ! pref_id ) return;
+        if ( ! pref_id ) {
+            onFailure();
+            return;
+        }
         var jpref = AjaxZip3.PREFMAP[pref_id];  // 都道府県名
-        if ( ! jpref ) return;
+        if ( ! jpref ) {
+            onFailure();
+            return;
+        }
+        
         var jcity = array[1];
         if ( ! jcity ) jcity = '';              // 市区町村名
         var jarea = array[2];
@@ -156,6 +171,8 @@ AjaxZip3.callback = function(data){
             }
         }
         AjaxZip3.faddr.value = jaddr;
+        
+        if( typeof AjaxZip3.onSuccess === 'function' ) AjaxZip3.onSuccess();
 
         // patch from http://iwa-ya.sakura.ne.jp/blog/2006/10/20/050037
         // update http://www.kawa.net/works/ajax/AjaxZip2/AjaxZip2.html#com-2006-12-15T04:41:22Z
