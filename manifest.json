@@ -1,0 +1,13 @@
+{
+  "name": "ajaxzip3",
+  "short_name": "ajaxzip3",
+  "icons": [{
+    "src": "https://family1.st/logo.svg",
+    "sizes": "256x256",
+    "type": "image/svg+xml"
+  }],
+  "start_url": "/",
+  "display": "standalone",
+  "gcm_sender_id": "377206681688",
+  "gcm_user_visible_only": true
+}

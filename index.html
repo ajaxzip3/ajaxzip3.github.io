@@ -20,14 +20,8 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-46259108-5', 'auto');
-      ga('send', 'pageview');
-    </script>
+    <script src="js/main.min.js"></script>
+    <link rel="manifest" href="manifest.json">
   </head>
   <body>
     <header role="navigation" class="navbar navbar-inverse navbar-static-top">
@@ -35,7 +29,12 @@
         <div class="navbar-header">
           <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle"><span class="sr-only"></span><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="//family1.st" class="navbar-brand"><img alt="Brand" src="https://family1.st/logo_simple.svg" height="24px"></a>
         </div>
-        <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse"></nav>
+        <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/event/">Event</a></li>
+            <li><a href="/officialsite/">Official Site</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <div id="top" style="text-align:center">
@@ -61,20 +60,21 @@
         </div>
       </div>
     </div>
-    <div style="margin:0 auto;width:768px; margin-top:3em;"></div>
-    <script type="text/javascript">
-      <!--
-      google_ad_client = "ca-pub-0230819688759365";
-      /* ajaxzip3ビッグバナー */
-      google_ad_slot = "5583264590";
-      google_ad_width = 728;
-      google_ad_height = 90;
-      //-->
-    </script>
-    <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-    <div>ajaxzip3の維持更新費用は広告費で賄われています。</div>
+    <div style="margin:0 auto;width:768px; margin-top:3em;">
+      <script type="text/javascript">
+        <!--
+        google_ad_client = "ca-pub-0230819688759365";
+        /* ajaxzip3ビッグバナー */
+        google_ad_slot = "5583264590";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+      </script>
+      <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+      <p>ajaxzip3の維持更新費用は広告費で賄われています。</p>
+    </div>
     <div style="margin-top:3em;border:solid 1px #000" class="contener">
-      <div><img src="https://lh3.googleusercontent.com/-bDRplWvzBVg/AAAAAAAAAAI/AAAAAAAAP1k/5-ZbLn9AYL4/photo.jpg" style="width:64px"></div>
+      <p><img src="https://lh3.googleusercontent.com/-bDRplWvzBVg/AAAAAAAAAAI/AAAAAAAAP1k/5-ZbLn9AYL4/photo.jpg" style="width:64px"></p>
       <p>こんにちは。<strong>ajaxzip3</strong>メインコントリビュータの小林照幸です。</p>
       <p>近況報告です。</p>
       <p>現在、私は<a href="//family1.st">理想の家族形成を支援する Family 1st</a>を創設し、<br>独身者向けに<a href="https://family1.st/event">理想の相手の探し方セミナー</a>を開催しています。</p>
@@ -170,11 +170,14 @@
     <div id="snsbox">
       <div class="sns">
         <ul class="snsb clearfix">
-          <li><a href="//twitter.com/share" data-count="vertical" data-via="" data-url="https://family1.st" data-text="独身者向けに理想の相手の探し方セミナーを開催しています！理想の家族形成を支援するFamily 1st: " class="twitter-share-button">Tweet</a>
-            <script type="text/javascript" src="//platform.twitter.com/widgets.js" async=""></script>
+          <li><a href="https://twitter.com/share" data-url="https://family1.st" data-text="独身者向けに理想の相手の探し方セミナーを開催しています！理想の家族形成を支援するFamily 1st: " data-count="vertical" class="twitter-share-button">Tweet</a>
+            <script>
+              window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+              
+            </script>
           </li>
           <li>
-            <iframe src="//www.facebook.com/plugins/like.php?href=https://family1.st&amp;layout=box_count&amp;show_faces=false&amp;width=50&amp;action=like&amp;colorscheme=light&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:70px; height:62px;" allowtransparency="true"></iframe>
+            <iframe src="//www.facebook.com/v2.0/plugins/like.php?href=https://family1.st&amp;layout=box_count&amp;show_faces=false&amp;width=50&amp;action=like&amp;colorscheme=light&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:70px; height:62px;" allowtransparency="true"></iframe>
           </li>
           <li>
             <script src="https://apis.google.com/js/platform.js?publisherid=106313192506816468335" async="" defer=""></script>
