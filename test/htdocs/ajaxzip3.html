@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+  </head>
+  <body>
+  <h1>AjaxZip3.zip2addr</h1>
+  <h2>郵便番号を3桁-4桁形式で入力される場合</h2>
+  <h3>住所欄をワンボックスにする場合</h3>
+  <form>
+    <input type="text" name="yubin01" size="10" maxlength="8" >
+    <input type="text" name="yubin02" onkeyup="AjaxZip3.zip2addr('yubin01',this,'addr01','addr01');">
+    <input type="text" name="addr01">
+  </form>
+
+  <h3>都道府県 と 以降の住所 に分ける場合</h3>
+  <form>
+    <input type="text" name="yubin11" size="10" maxlength="8">
+    <input type="text" name="yubin12" onkeyup="AjaxZip3.zip2addr('yubin11',this,'region11','addr11');">
+    <input type="text" name="region11">
+    <input type="text" name="addr11">
+  </form>
+
+  <h3>都道府県 と 市町村区 と 以降の住所に分ける場合</h3>
+  <form>
+    <input type="text" name="yubin21" size="10" maxlength="8" >
+    <input type="text" name="yubin22"onkeyup="AjaxZip3.zip2addr('yubin21',this,'region21','local21','addr21');">
+    <input type="text" name="region21">
+    <input type="text" name="local21">
+    <input type="text" name="addr21">
+  </form>
+
+  <h3>都道府県 と 市町村区 と 町域 と 以降の住所に分ける場合</h3>
+  <form>
+    <input type="text" name="yubin31" size="10" maxlength="8" >
+    <input type="text" name="yubin32"onkeyup="AjaxZip3.zip2addr('yubin31',this,'region31','local31','street31','extended31');">
+    <input type="text" name="region31">
+    <input type="text" name="local31">
+    <input type="text" name="street31">
+    <input type="text" name="extended31">
+  </form>
+
+  <h2>ワンボックスで郵便番号7桁を入力させる場合</h2>
+  <h3>住所欄をワンボックスにする場合</h3>
+  <form>
+    <input type="text" name="yubin41" size="10" maxlength="8" onkeyup="AjaxZip3.zip2addr(this,'','addr41','addr41');">
+    <input type="text" name="addr41">
+  </form>
+
+  <h3>都道府県 と 以降の住所 に分ける場合</h3>
+  <form>
+    <input type="text" name="yubin51" size="10" maxlength="8" onkeyup="AjaxZip3.zip2addr(this,'','region51','addr51');">
+    <input type="text" name="region51">
+    <input type="text" name="addr51">
+  </form>
+
+  <h3>都道府県 と 市町村区 と 以降の住所に分ける場合</h3>
+  <form>
+    <input type="text" name="yubin61" size="10" maxlength="8" onkeyup="AjaxZip3.zip2addr(this,'','region61','local61','addr61');">
+    <input type="text" name="region61">
+    <input type="text" name="local61">
+    <input type="text" name="addr61">
+  </form>
+
+  <h3>都道府県 と 市町村区 と 町域 と 以降の住所に分ける場合</h3>
+  <form>
+    <input type="text" name="yubin71" size="10" maxlength="8" onkeyup="AjaxZip3.zip2addr(this,'','region71','local71','street71','extended71');">
+    <input type="text" name="region71">
+    <input type="text" name="local71">
+    <input type="text" name="street71">
+    <input type="text" name="extended71">
+  </form>
+
+  </body>
+</html>
