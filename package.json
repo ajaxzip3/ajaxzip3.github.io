@@ -14,5 +14,5 @@
     "test": "gulp test"
   },
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
