@@ -1,7 +1,7 @@
 #ajaxzip3
 世界一、簡単に設置できる郵便番号検索を目指して！
 
-▶[ajaxzip3設置サンプルページ](https://ajaxzip3.github.io/)◀
+▶[ajaxzip3設置サンプルページ](https://ajaxzip3.github.io/sample-page/)◀
 
 ###最新のお知らせ
 
@@ -41,7 +41,7 @@ HTML中の
 - 引数の順序を変更しました。（詳しくは下記を参照してください）
 
 ###利用方法（設定例）
-▶[ajaxzip3設置サンプルページ](https://ajaxzip3.github.io/)◀
+▶[ajaxzip3設置サンプルページ](https://ajaxzip3.github.io/sample-page/)◀
 
 HTMLヘッダ設定例（設置するHTMLのcharsetがUTF-8の場合）
 
