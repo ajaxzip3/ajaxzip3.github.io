@@ -31,7 +31,7 @@
 
 AjaxZip3 = function(){};
 AjaxZip3.VERSION = '0.51';
-AjaxZip3.JSONDATA = 'https://ajaxzip3.github.io/zipdata';
+AjaxZip3.JSONDATA = 'https://yubinbango.github.io/yubinbango-data/data';
 AjaxZip3.CACHE = [];
 AjaxZip3.prev = '';
 AjaxZip3.nzip = '';
@@ -126,7 +126,7 @@ AjaxZip3.callback = function(data){
             onFailure();
             return;
         }
-        
+
         var jcity = array[1];
         if ( ! jcity ) jcity = '';              // 市区町村名
         var jarea = array[2];
@@ -171,7 +171,7 @@ AjaxZip3.callback = function(data){
             }
         }
         AjaxZip3.faddr.value = jaddr;
-        
+
         if( typeof AjaxZip3.onSuccess === 'function' ) AjaxZip3.onSuccess();
 
         // patch from http://iwa-ya.sakura.ne.jp/blog/2006/10/20/050037
@@ -224,7 +224,7 @@ AjaxZip3.getElementByName = function ( elem, sibling ) {
 }
 
 AjaxZip3.zipjsonpquery = function(){
-    var url = AjaxZip3.JSONDATA+'/zip-'+AjaxZip3.nzip.substr(0,3)+'.js';
+    var url = AjaxZip3.JSONDATA+'/'+AjaxZip3.nzip.substr(0,3)+'.js';
     var scriptTag = document.createElement("script");
     scriptTag.setAttribute("type", "text/javascript");
     scriptTag.setAttribute("charset", "UTF-8");
@@ -232,6 +232,6 @@ AjaxZip3.zipjsonpquery = function(){
     document.getElementsByTagName("head").item(0).appendChild(scriptTag);
    };
 
-function zipdata(data){
+function $yubin(data){
     AjaxZip3.callback(data);
 };
