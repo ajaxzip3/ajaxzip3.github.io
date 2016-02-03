@@ -1,3 +1,5 @@
+- 新規の設置には [yubinbango](https://github.com/yubinbango/yubinbango) をオススメしています。
+
 #ajaxzip3
 世界一、簡単に設置できる郵便番号検索を目指して！
 
@@ -5,6 +7,7 @@
 
 ###最新のお知らせ
 
+- 新規の設置には [yubinbango](https://github.com/yubinbango/yubinbango) をオススメしています。
 - Google Codeのサービス廃止によりGithubに移行いたしました。
 - Github移行を機にこれまでhttp、httpsで分かれていたURLを一本化いたしました。  
 今後は、https://ajaxzip3.github.io/ajaxzip3.js をご利用ください。
