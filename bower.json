@@ -1,11 +1,12 @@
 {
   "name": "ajaxzip3",
-  "version": "0.52",
-  "homepage": "https://github.com/firstdev/ajaxzip3.github.io",
+  "version": "1.0.0",
+  "homepage": "https://github.com/kawashimaken/ajaxzip3.github.io.git",
   "authors": [
+    "https://github.com/ajaxzip3"
     "kawashimaken <kawashimaken2015@gmail.com>"
   ],
-  "description": "add onchange",
+  "description": "add onchange triger",
   "main": "ajaxzip3-source.js",
   "keywords": [
     "zip"
