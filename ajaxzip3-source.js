@@ -152,11 +152,25 @@ AjaxZip3.callback = function(data){
             } else {
                 // 都道府県名テキスト入力の場合
                 AjaxZip3.fpref.value = jpref;
+                if ("createEvent" in document) {
+                    var evt = document.createEvent("HTMLEvents");
+                    evt.initEvent("change", false, true);
+                    AjaxZip3.fpref.dispatchEvent(evt);
+                }
+                else AjaxZip3.fpref.fireEvent("onchange");
+                //参考はこちら
+                //http://stackoverflow.com/questions/2856513/how-can-i-trigger-an-onchange-event-manually
             }
         }
         if ( AjaxZip3.farea ) {
             cursor = AjaxZip3.farea;
             AjaxZip3.farea.value = jarea;
+            if ("createEvent" in document) {
+                var evt = document.createEvent("HTMLEvents");
+                evt.initEvent("change", false, true);
+                AjaxZip3.farea.dispatchEvent(evt);
+            }
+            else AjaxZip3.farea.fireEvent("onchange");
         } else {
             jaddr += jarea;
         }
@@ -168,9 +182,21 @@ AjaxZip3.callback = function(data){
             } else if ( jstrt ) {
                 // 番地テキスト入力欄がある場合
                 AjaxZip3.fstrt.value = jstrt;
+                if ("createEvent" in document) {
+                    var evt = document.createEvent("HTMLEvents");
+                    evt.initEvent("change", false, true);
+                    AjaxZip3.fstrt.dispatchEvent(evt);
+                }
+                else AjaxZip3.fstrt.fireEvent("onchange");
             }
         }
         AjaxZip3.faddr.value = jaddr;
+        if ("createEvent" in document) {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("change", false, true);
+            AjaxZip3.faddr.dispatchEvent(evt);
+        }
+        else AjaxZip3.faddr.fireEvent("onchange");
 
         if( typeof AjaxZip3.onSuccess === 'function' ) AjaxZip3.onSuccess();
 

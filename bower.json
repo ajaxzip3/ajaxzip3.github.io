@@ -1,0 +1,21 @@
+{
+  "name": "ajaxzip3",
+  "version": "0.52",
+  "homepage": "https://github.com/firstdev/ajaxzip3.github.io",
+  "authors": [
+    "kawashimaken <kawashimaken2015@gmail.com>"
+  ],
+  "description": "add onchange",
+  "main": "ajaxzip3-source.js",
+  "keywords": [
+    "zip"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
