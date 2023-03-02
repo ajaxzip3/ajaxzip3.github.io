@@ -229,6 +229,7 @@ AjaxZip3.zipjsonpquery = function(){
     scriptTag.setAttribute("type", "text/javascript");
     scriptTag.setAttribute("charset", "UTF-8");
     scriptTag.setAttribute("src", url);
+    scriptTag.onerror = ()=>{if(typeof AjaxZip3.onFailure == 'function')AjaxZip3.onFailure();}
     document.getElementsByTagName("head").item(0).appendChild(scriptTag);
    };
 
